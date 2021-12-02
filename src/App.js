@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// importing components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+
+
+// importing pages
+// import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+
+// Adding google fonts
 
 function App() {
+
+  const URL = "https://edward-cabral-portfolio.herokuapp.com/"
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Routes>
+        <Route exact path="/"/>
+        <Route path="/projects" element={<Projects URL={URL} />}/>
+        <Route exact path="/" element={<About URL={URL} />}/>
+      </Routes>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,66 @@
+:root{
+    --navbar-background-color: black;
+    --navbar-font-color: white;
+    --navbar-font-color-hover: rgb(235, 184, 28);
+
+}
+
+/* 
+-------------------------------------------------
+The entire navbar 
+-------------------------------------------------
+*/
+.navbar{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        border: 1px solid black;
+        padding: 8px;
+        width: 100%;
+        margin: auto;
+        list-style: none;
+        font-family: 'Chicle', cursive;
+        font-size: x-large;
+        background-color: black
+};
+
+/* 
+-------------------------------------------------
+The left side of the navbar 
+-------------------------------------------------
+*/
+.logo {
+
+}
+
+#myInitials{
+    border: 3px solid white;
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-font-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    /* margin-left: -100px; */
+}
+
+#myInitials:hover{
+    background-color: var(--navbar-font-color-hover);
+    color: black;
+}
+
+/* 
+-------------------------------------------------
+The right side of the navbar 
+-------------------------------------------------
+*/
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-left: 100px;
+}
+
+.nav-links-li {
+    text-decoration: dotted;
+    margin: 10px;
+    color: var(--navbar-font-color);
+}
